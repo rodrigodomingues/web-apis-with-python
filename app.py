@@ -23,10 +23,10 @@ def index():
         response = {"data":f"Hello, {fname}"}
     if(lname and not fname):
         response = {"data":f"Hello, Mr. {lname}"}
-        
-    return jsonify(response)
+
+    return response
 
 @app.get("/")
 def base():
     response = {"data":"Hey!"}
-    return jsonify(response)
+    return response
