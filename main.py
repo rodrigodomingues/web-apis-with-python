@@ -1,8 +1,9 @@
-from typing import Optional
-from fastapi import FastAPI
+from typing import List, Optional
+from fastapi import FastAPI, Query
+from fastapi.encoders import jsonable_encoder
 from model.dbHandler import match_exact, match_like
 
-app = Flask(__name__)
+app = FastAPI()
 
 
 @app.get("/")
